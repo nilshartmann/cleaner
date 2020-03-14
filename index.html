@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Hier einfügen:</p>
+    <textarea id="theText" rows="20" style="width: 100%"> </textarea>
+    <button onclick="javascript:clean()">Clean!</button>
+    <textarea id="cleanText" rows="20" style="width: 100%"> </textarea>
+  </body>
+
+  <script>
+    function clean() {
+      let v = document.getElementById("theText").value;
+      v = v.replace(/<br>/g, "");
+      v = v.replace(/<p>/g, "");
+      v = v.replace(/<\/p>/g, "");
+      cleanText.value = v.replace("<br>", "");
+    }
+  </script>
+</html>
